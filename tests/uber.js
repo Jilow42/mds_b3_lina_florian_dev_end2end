@@ -6,8 +6,17 @@ describe('Uber Website', function() {
       browser
         .waitForElementVisible('body')
         .assert.titleContains('Uber')
+        .expect.element('head').to.be.present
         .end();
     });
+    /* test('Check block login in the header wrapper', function (browser) {
+      browser
+        .waitForElementVisible('body')
+        .useCSS()
+        .end();
+    }); */
+});
+
 
 /*
 // Exemple pour basculer sur du XPATH
@@ -28,6 +37,3 @@ test('Check title page', function (browser) {
     .assert.containsText('.mainline-results', 'Nightwatch.js')
     .end();
 */
-
-
-});
