@@ -1,4 +1,4 @@
-{
+      {
   "name": "end2end",
   "version": "1.0.0",
   "description": "Functional testing",
@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/.bin/nightwatch ./tests/uber.js"
+    "test": "nightwatch ./tests/uber.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/GBeauny/end2end_test#readme",
   "dependencies": {
+    "add": "^2.0.6",
     "chromedriver": "^87.0.7",
     "geckodriver": "^1.21.1",
     "nightwatch": "^1.5.1",

@@ -1,16 +1,11 @@
-describe('Ecosia example', function() {
+describe('Uber Website', function() {
 
-    beforeEach(browser => browser.url('https://www.ecosia.org/'));
+    beforeEach(browser => browser.url('https://www.uber.com/fr/fr/'));
 
-    test('Demo test ecosia.org', function (browser) {
+    test('Open Uber Website', function (browser) {
       browser
         .waitForElementVisible('body')
-        .assert.titleContains('Ecosia')
-        .assert.visible('input[type=search]')
-        .setValue('input[type=search]', 'nightwatch')
-        .assert.visible('button[type=submit]')
-        .click('button[type=submit]')
-        .assert.containsText('.mainline-results', 'Nightwatch.js')
+        .assert.titleContains('Uber')
         .end();
     });
 
@@ -21,6 +16,17 @@ describe('Ecosia example', function() {
    .waitForElementPresent('//button[@id="/signup/"]')
 // Revenir sur du CSS
 .useCSS()
+
+test('Check title page', function (browser) {
+  browser
+    .waitForElementVisible('body')
+    .assert.titleContains('uber')
+    .assert.visible('input[type=search]')
+    .setValue('input[type=search]', 'nightwatch')
+    .assert.visible('button[type=submit]')
+    .click('button[type=submit]')
+    .assert.containsText('.mainline-results', 'Nightwatch.js')
+    .end();
 */
 
 
